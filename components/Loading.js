@@ -1,9 +1,10 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, StatusBar } from "react-native";
 
 function Loading() {
   return (
     <View style={styles.container}>
+      <StatusBar barStyle={"dark-content"} />
       <Text style={styles.text}>날씨 정보 </Text>
       <Text style={styles.text}>받아오는 중....</Text>
     </View>

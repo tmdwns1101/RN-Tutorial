@@ -40,6 +40,7 @@ class App extends Component {
     this.setState({ ...this.state, loading: true });
     this.getLocation();
   }
+
   render() {
     const { loading, data } = this.state;
 
@@ -49,9 +50,10 @@ class App extends Component {
       return null;
     } else {
       const {
-        main: { temp }
+        main: { temp },
+        weather
       } = data;
-      return <Weather temp={Math.ceil(temp)} />;
+      return <Weather temp={Math.ceil(temp)} condition={weather[0].main} />;
     }
   }
 }
